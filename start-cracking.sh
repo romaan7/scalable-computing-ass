@@ -71,9 +71,9 @@ for filename in $HASH_FILE_DIR/*.hashes.*; do
 done
 }
 
-crack_invremental(){
+crack_incremental(){
 
-
+#incremental cracking 
 }
 
 crack_with_wordlist(){
