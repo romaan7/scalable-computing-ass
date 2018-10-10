@@ -2,8 +2,8 @@
 #
 # Copyright (C) Roman Shaikh <shaikhr@tcd.ie>
 #
-# 
-# 
+# For cracking in diffrent modes. 
+# Argon2 is not supported by hashcat , try it with JTR
 
 #set -x
 
@@ -45,6 +45,7 @@ SHA512_SESSION_ID="sha512-session"
 
 #Counters for keeping track of # of identified types
 
+crack_aggrasive(){
 echo "Starting to Crack."
 
 nohup $HASHCAT_ROOT/hashcat64.bin --status --session=md5-session -o $HASH_HOME/md5.out -a 3 -m 500 -i --increment-min=6 $HASH_HOME/shaikhr.hashes.md5crypt ?a?a?a?a?a?a?a?a > md5.out 2>&1 &
@@ -68,4 +69,14 @@ for filename in $HASH_FILE_DIR/*.hashes.*; do
 	
 	echo "Running brute-force attack on: $filename"
 done
+}
 
+crack_invremental(){
+
+
+}
+
+crack_with_wordlist(){
+
+
+}
